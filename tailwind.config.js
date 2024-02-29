@@ -13,6 +13,13 @@ export default {
         'dark-orange': '#863918',
       },
     },
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      lgp: '1024px',
+      xl: '1440px',
+    },
   },
   plugins: [],
 }

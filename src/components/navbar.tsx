@@ -32,16 +32,18 @@ const socials: SocialType[] = [
 
 export function Navbar() {
   return (
-    <header className="max-w-[1300px] w-full mx-auto py-[18px] px-12 flex items-center justify-between z-10">
+    <header className="max-w-[1300px] w-full mx-auto py-[18px] px-4 sm:px-6 md:px-12 flex items-center justify-between z-10">
       <div>
-        <h2 className="text-[32px] font-extrabold text-narvik">Bewave</h2>
+        <h2 className="text-2xl sm:text-[32px] font-extrabold text-narvikn tracking-[-3px]">
+          Bewave
+        </h2>
       </div>
 
       <div className="flex items-center justify-center">
-        <ul className="flex items-center justify-center gap-2">
+        <ul className="flex items-center justify-center gap-1 sm:gap-2">
           {socials.map((social) => (
             <a
-              className="appearance-none p-2 transition-colors duration-200 hover:text-orange"
+              className="appearance-none p-1 sm:p-2 transition-colors duration-200 hover:text-orange"
               target="_blank"
               key={social.name}
               href={social.url ? social.url : '/'}
