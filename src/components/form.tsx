@@ -1,11 +1,34 @@
-// import { useForm, SubmitHandler } from 'react-hook-form'
-// import { zodResolver } from '@hookform/resolvers/zod'
+import { useForm, SubmitHandler } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { toast } from 'sonner'
 
-// import { z } from 'zod'
+import { z } from 'zod'
+
+const createFormScheme = z.object({
+  email: z.string().email('Deve ser um email válido'),
+})
+
+type formScheme = z.infer<typeof createFormScheme>
 
 export function Form() {
+  const {
+    register,
+    formState: { errors },
+    reset,
+    handleSubmit,
+  } = useForm<formScheme>({ resolver: zodResolver(createFormScheme) })
+
+  const onSubmit: SubmitHandler<formScheme> = () => {
+    toast.success('E-mail registrado. Agradecemos pelo seu interesse!')
+    reset()
+  }
+
   return (
-    <form action="" className="flex flex-col items-center mt-8 w-full">
+    <form
+      action=""
+      onSubmit={handleSubmit(onSubmit)}
+      className="flex flex-col items-center mt-8 w-full"
+    >
       <h3 className="text-2xl font-semibold text-center">
         Entrar na lista de espera
       </h3>
@@ -17,7 +40,8 @@ export function Form() {
         <input
           type="email"
           placeholder="Digite seu email"
-          className="max-w-[340px] w-full bg-[#07071C] border border-[#101033] rounded-md px-3 py-[10px] placeholder-silver text-sm font-medium"
+          {...register('email')}
+          className={`max-w-[340px] w-full bg-[#07071C] outline-none border transition-all duration-200 ${errors.email ? 'border-red-600' : 'border-[#101033]'}  rounded-md px-3 py-[10px] placeholder-silver text-sm font-medium`}
         />
         <div
           role="complementary"
