@@ -29,7 +29,7 @@ export function Form() {
       onSubmit={handleSubmit(onSubmit)}
       className="flex flex-col items-center mt-8 w-full"
     >
-      <h3 className="text-2xl font-semibold text-center">
+      <h3 className="text-2xl font-semibold text-center bg-clip-text text-transparent bg-gradient-to-b from-white to-[#999]">
         Entrar na lista de espera
       </h3>
       <p className="text-xs font-medium text-center">
