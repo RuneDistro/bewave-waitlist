@@ -28,7 +28,6 @@ export function App() {
           Junto, vamos revolucionar a maneira como você administra suas
           criações!
         </p>
-
         <Form />
       </main>
       <Footer />
