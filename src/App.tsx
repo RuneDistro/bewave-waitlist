@@ -24,12 +24,15 @@ export function App() {
         <p className="text-sm sm:text-base font-semibold text-center">
           Lançar sua música e gerenciar sua carreira nunca foi tão fácil.
         </p>
+
         <p className="text-sm sm:text-base font-semibold text-center">
-          Junto, vamos revolucionar a maneira como você administra suas
+          Juntos, vamos revolucionar a maneira como você administra suas
           criações!
         </p>
+
         <Form />
       </main>
+
       <Footer />
     </div>
   )
