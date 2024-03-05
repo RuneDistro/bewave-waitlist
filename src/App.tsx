@@ -31,7 +31,6 @@ export function App() {
 
         <Form />
       </main>
-
       <Footer />
     </div>
   )
