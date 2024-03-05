@@ -11,7 +11,6 @@ export function App() {
     <div className="bg-black relative h-screen flex flex-col justify-between px-4 sm:px-6 md:px-12">
       <Toaster />
       <TopGradient />
-
       <Navbar />
 
       <main className="flex flex-col items-center pb-20">
