@@ -1,4 +1,4 @@
-import { Footer } from './components/foooter'
+import { Footer } from './components/footer'
 import { Form } from './components/form'
 import { FrequencyIcon } from './components/frequency-icon'
 import { Navbar } from './components/navbar'

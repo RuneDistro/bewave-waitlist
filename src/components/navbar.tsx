@@ -1,4 +1,4 @@
-import { FaTiktok, FaYoutube, FaInstagram } from 'react-icons/fa'
+import { FaYoutube, FaInstagram } from 'react-icons/fa'
 import { FaXTwitter } from 'react-icons/fa6'
 
 interface SocialType {
@@ -8,11 +8,6 @@ interface SocialType {
 }
 
 const socials: SocialType[] = [
-  {
-    name: 'TikTok',
-    url: 'https://github.com/RuneDistro',
-    icon: <FaTiktok size={18} />,
-  },
   {
     name: 'Youtube',
     url: 'https://github.com/RuneDistro',
