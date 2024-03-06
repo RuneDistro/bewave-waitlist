@@ -4,12 +4,9 @@ import { FrequencyIcon } from './components/frequency-icon'
 import { Navbar } from './components/navbar'
 import { TopGradient } from './components/top-gradient'
 
-import { Toaster } from 'sonner'
-
 export function App() {
   return (
     <div className="bg-black relative h-screen flex flex-col justify-between px-4 sm:px-6 md:px-12">
-      <Toaster />
       <TopGradient />
       <Navbar />
 
