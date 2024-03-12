@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { FaYoutube, FaInstagram } from 'react-icons/fa'
 import { FaXTwitter } from 'react-icons/fa6'
 
@@ -37,17 +38,16 @@ export function Navbar() {
       <div className="flex items-center justify-center">
         <ul className="flex items-center justify-center gap-1 sm:gap-2">
           {socials.map((social) => (
-            <a
+            <Link
               className="appearance-none p-1 sm:p-2 transition-colors duration-200 hover:text-orange"
               target="_blank"
               key={social.name}
               href={social.url ? social.url : '/'}
-              rel="noreferrer"
             >
               <li className="flex items-center justify-center list-none">
                 {social.icon}
               </li>
-            </a>
+            </Link>
           ))}
         </ul>
       </div>

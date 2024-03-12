@@ -11,7 +11,6 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   color: #F5F5F5;
@@ -19,5 +18,5 @@ body {
 
 
 .text-inter {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-inter);
 }

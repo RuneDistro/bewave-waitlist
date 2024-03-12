@@ -1,5 +1,7 @@
 // eslint-disable-next-line import/no-absolute-path
-import frequency from '/images/frequency-icon.svg'
+import Image from 'next/image'
+// eslint-disable-next-line import/no-absolute-path
+import frequency from '/public/images/frequency-icon.svg'
 
 export function FrequencyIcon() {
   return (
@@ -9,7 +11,7 @@ export function FrequencyIcon() {
           <div className="flex items-center justify-center p-[10px] rounded-full bg-gradient-to-b from-orange from-[-30%] to-black to-10%">
             <div className="flex items-center justify-center p-[1px] rounded-full bg-gradient-to-b from-orange from-0% to-dark-orange/0 to-50%">
               <div className="rounded-full p-5 flex items-center justify-center bg-gradient-to-b from-orange from-[-30%] to-black to-15%">
-                <img
+                <Image
                   src={frequency}
                   alt="Sinal de Frequência - Logo alternativa da Bewave"
                 />
