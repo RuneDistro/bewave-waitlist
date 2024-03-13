@@ -5,6 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { toast } from 'sonner'
 
 import { z } from 'zod'
+import { SendEmail } from '../services/resend/sendEmail'
 
 const createFormScheme = z.object({
   email: z.string().email('Deve ser um email válido'),
@@ -20,8 +21,19 @@ export function Form() {
     handleSubmit,
   } = useForm<formScheme>({ resolver: zodResolver(createFormScheme) })
 
-  const onSubmit: SubmitHandler<formScheme> = () => {
-    toast.success('E-mail registrado. Agradecemos pelo seu interesse!')
+  const onSubmit: SubmitHandler<formScheme> = async (data) => {
+    const result = await SendEmail(data.email)
+
+    if (result.status === 'error') {
+      toast.error(
+        'Ocorreu um erro no processamento do email. Tente novamente, mais tarde',
+      )
+      return
+    }
+
+    toast.success(
+      'Você entrou na nossa lista de espera! Um email foi enviado confirmando sua inscrição.',
+    )
     reset()
   }
 
