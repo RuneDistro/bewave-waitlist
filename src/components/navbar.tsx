@@ -11,17 +11,17 @@ interface SocialType {
 const socials: SocialType[] = [
   {
     name: 'Youtube',
-    url: 'https://github.com/RuneDistro',
+    url: 'https://www.youtube.com/@Bewavemusic',
     icon: <FaYoutube size={18} />,
   },
   {
     name: 'Instagram',
-    url: 'https://instagram.com/pietro_rhyann',
+    url: 'https://www.instagram.com/bewave.music/',
     icon: <FaInstagram size={18} />,
   },
   {
     name: 'X',
-    url: 'https://twitter.com/pietrorhyan2',
+    url: 'https://twitter.com/BewaveMusic',
     icon: <FaXTwitter size={18} />,
   },
 ]
