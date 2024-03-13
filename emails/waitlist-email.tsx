@@ -19,7 +19,7 @@ const baseUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
   : ''
 
-export function WaitlistEmail() {
+export const WaitlistEmail = () => {
   return (
     <Html>
       <Head />
@@ -87,7 +87,7 @@ export function WaitlistEmail() {
             </Section>
           </Container>
 
-          <Container className="mt-20 mb-45">
+          <Container className="my-20 pb-20">
             <Section>
               <Text className="text-center text-base font-semibold text-gray-600 my-10">
                 Redes sociais
@@ -128,3 +128,5 @@ export function WaitlistEmail() {
     </Html>
   )
 }
+
+export default WaitlistEmail
