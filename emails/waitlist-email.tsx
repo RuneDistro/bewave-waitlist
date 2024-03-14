@@ -15,10 +15,6 @@ import {
 import { Tailwind } from '@react-email/tailwind'
 import * as React from 'react'
 
-const baseUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : ''
-
 export const WaitlistEmail = () => {
   return (
     <Html>
@@ -45,9 +41,9 @@ export const WaitlistEmail = () => {
       >
         <Body className="bg-offwhite text-base font-sans">
           <Img
-            src={`${baseUrl}/static/bewave.png`}
-            width="184"
-            height="75"
+            src={`https://live.staticflickr.com/65535/53587570100_02154e8018_n.jpg`}
+            width="134"
+            height="28"
             alt="Bewave"
             className="mx-auto my-20"
           />

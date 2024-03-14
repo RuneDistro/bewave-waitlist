@@ -14,6 +14,7 @@ export function FrequencyIcon() {
                 <Image
                   src={frequency}
                   alt="Sinal de Frequência - Logo alternativa da Bewave"
+                  priority
                 />
               </div>
             </div>
