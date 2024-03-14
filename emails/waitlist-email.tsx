@@ -41,11 +41,11 @@ export const WaitlistEmail = () => {
       >
         <Body className="bg-offwhite text-base font-sans">
           <Img
-            src={`https://live.staticflickr.com/65535/53587570100_02154e8018_n.jpg`}
+            src="https://ucarecdn.com/f89789f7-fe0d-4edf-b70a-365ed8f3d9d3/-/preview/347x69/"
             width="134"
             height="28"
             alt="Bewave"
-            className="mx-auto my-20"
+            className="mx-auto my-20 pt-20"
           />
           <Container className="bg-white px-45 pt-45 pb-20">
             <Heading className="text-center mt-0 leading-8">
@@ -83,7 +83,7 @@ export const WaitlistEmail = () => {
             </Section>
           </Container>
 
-          <Container className="my-20 pb-20">
+          <Container className="py-20">
             <Section>
               <Text className="text-center text-base font-semibold text-gray-600 my-10">
                 Redes sociais
