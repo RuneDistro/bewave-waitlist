@@ -3,6 +3,8 @@
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { toast } from 'sonner'
+import { BiLoaderAlt } from 'react-icons/bi'
+import { useState } from 'react'
 
 import { z } from 'zod'
 import { SendEmail } from '../services/resend/sendEmail'
@@ -21,16 +23,21 @@ export function Form() {
     handleSubmit,
   } = useForm<formScheme>({ resolver: zodResolver(createFormScheme) })
 
+  const [isFetching, setIsFetching] = useState(false)
+
   const onSubmit: SubmitHandler<formScheme> = async (data) => {
+    setIsFetching(true)
     const result = await SendEmail(data.email)
 
     if (result.status === 'error') {
+      setIsFetching(false)
       toast.error(
         'Ocorreu um erro no processamento do email. Tente novamente, mais tarde',
       )
       return
     }
 
+    setIsFetching(false)
     toast.success(
       'Você entrou na nossa lista de espera! Um email foi enviado confirmando sua inscrição.',
     )
@@ -54,8 +61,9 @@ export function Form() {
         <input
           type="email"
           placeholder="Digite seu email"
+          disabled={isFetching}
           {...register('email')}
-          className={`max-w-[340px] w-full bg-[#07071C] outline-none border transition-all duration-200 ${errors.email ? 'border-red-600' : 'border-[#101033]'}  rounded-md px-3 py-[10px] placeholder-silver text-sm font-medium`}
+          className={`max-w-[340px] w-full bg-[#07071C] outline-none border transition-all duration-200 ${errors.email ? 'border-red-600' : 'border-[#101033]'}  rounded-md px-3 py-[10px] disabled:cursor-not-allowed placeholder-silver text-sm font-medium`}
         />
         <div
           role="complementary"
@@ -63,9 +71,14 @@ export function Form() {
         >
           <button
             type="submit"
-            className="flex rounded-md items-center justify-center px-6 py-[8px] bg-gradient-to-b from-orange to-dark-orange text-black font-medium text-base"
+            disabled={isFetching}
+            className="flex rounded-md items-center justify-center w-[99px] h-[40px] bg-gradient-to-b disabled:cursor-not-allowed from-orange to-dark-orange text-black font-medium text-base"
           >
-            Enviar
+            {isFetching ? (
+              <BiLoaderAlt size={18} className="animate-spin" />
+            ) : (
+              <span>Enviar</span>
+            )}
           </button>
         </div>
       </div>
