@@ -6,14 +6,14 @@ import { TopGradient } from '../components/top-gradient'
 
 export default function App() {
   return (
-    <div className="bg-black relative h-screen flex flex-col justify-between px-4 sm:px-6 md:px-12">
+    <div className="relative h-screen flex flex-col justify-between px-4 sm:px-6 md:px-12">
       <TopGradient />
       <Navbar />
 
-      <main className="flex flex-col items-center pb-20">
+      <main className="flex flex-col items-center">
         <FrequencyIcon />
 
-        <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-orange to-dark-orange font-extrabold text-7xl md:text-8xl tracking-[-8px] md:tracking-[-10px] w-[320px] md:w-[358px]">
+        <h1 className="-mt-10 bg-clip-text text-transparent text-center bg-gradient-to-b from-orange to-dark-orange font-extrabold text-7xl md:text-8xl tracking-[-8px] md:tracking-[-10px] w-[320px] md:w-[358px]">
           Bewave
         </h1>
 
