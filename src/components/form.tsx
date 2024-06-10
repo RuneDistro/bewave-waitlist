@@ -67,32 +67,6 @@ export function Form() {
         <span>ou</span>
         <div className="bg-gradient-to-r from-white to-white/20 w-10 h-[1px]"></div>
       </div>
-
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-1 w-full">
-        <input
-          type="email"
-          placeholder="Digite seu email"
-          disabled={isFetching}
-          {...register('email')}
-          className={`max-w-[340px] w-full bg-[#07071C] outline-none border transition-all duration-200 ${errors.email ? 'border-red-600' : 'border-[#101033]'}  rounded-md px-3 py-[10px] disabled:cursor-not-allowed placeholder-silver text-sm font-medium`}
-        />
-        <div
-          role="complementary"
-          className="flex items-center justify-center p-[1px] rounded-md bg-gradient-to-b from-[#F97E4B] to-[#9A401A] transition-opacity duration-200 hover:opacity-90"
-        >
-          <button
-            type="submit"
-            disabled={isFetching}
-            className="flex rounded-md items-center justify-center w-[99px] h-[40px] bg-gradient-to-b disabled:cursor-not-allowed from-orange to-dark-orange text-black font-medium text-base"
-          >
-            {isFetching ? (
-              <BiLoaderAlt size={18} className="animate-spin" />
-            ) : (
-              <span>Enviar</span>
-            )}
-          </button>
-        </div>
-      </div>
     </form>
   )
 }
