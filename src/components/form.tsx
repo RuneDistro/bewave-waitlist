@@ -61,12 +61,6 @@ export function Form() {
       >
         Clique aqui para entrar em contato pelo nosso Whatsapp.
       </Link>
-
-      <div className="my-[10px] text-sm flex items-center justify-center gap-1">
-        <div className="bg-gradient-to-l from-white to-white/20 w-10 h-[1px]"></div>
-        <span>ou</span>
-        <div className="bg-gradient-to-r from-white to-white/20 w-10 h-[1px]"></div>
-      </div>
     </form>
   )
 }
