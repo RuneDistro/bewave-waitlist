@@ -2,8 +2,7 @@
 import './global.css'
 
 import type { Metadata } from 'next'
-import { Montserrat, Inter } from 'next/font/google'
-import Providers from './providers'
+import { Inter } from 'next/font/google'
 
 export const metadata: Metadata = {
   title: 'Bewave',
@@ -42,10 +41,6 @@ export const metadata: Metadata = {
 }
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
-const montserrat = Montserrat({
-  subsets: ['latin'],
-  variable: '--font-montserrat',
-})
 
 export default function RootLayout({
   children,
@@ -54,11 +49,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        id="root"
-        className={`${montserrat.className} ${inter.variable} bg-black`}
-      >
-        <Providers>{children}</Providers>
+      <body id="root" className={`${inter.variable} bg-black`}>
+        {children}
       </body>
     </html>
   )
