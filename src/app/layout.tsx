@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 export const metadata: Metadata = {
-  title: 'Bewave',
+  title: 'Home | Bewave',
   description:
     'Bewave é a distribuidora musical onde o artista verá essas principais características: facilidade e controle total da sua carreira.',
   keywords: [
