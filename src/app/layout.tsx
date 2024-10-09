@@ -1,13 +1,19 @@
+/* eslint-disable camelcase */
 /* eslint-disable react-refresh/only-export-components */
 import './global.css'
 
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import {
+  Nunito_Sans,
+  Wix_Madefor_Display,
+  Wix_Madefor_Text,
+} from 'next/font/google'
+import { Navbar } from '../components/navbar'
 
 export const metadata: Metadata = {
   title: 'Home | Bewave',
   description:
-    'Bewave é a distribuidora musical onde o artista verá essas principais características: facilidade e controle total da sua carreira.',
+    'A Bewave facilita a conexão entre artistas e as principais plataformas digitais, oferecendo distribuição global e suporte especializado',
   keywords: [
     'bewave',
     'bewave digital music',
@@ -40,7 +46,22 @@ export const metadata: Metadata = {
   },
 }
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const nunitoSans = Nunito_Sans({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-nunito-sans',
+})
+
+const madeforDisplay = Wix_Madefor_Display({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-madefor-display',
+})
+
+const madeforText = Wix_Madefor_Text({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+})
 
 export default function RootLayout({
   children,
@@ -49,7 +70,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body id="root" className={`${inter.variable} bg-black`}>
+      <body
+        id="root"
+        className={`${madeforText.className} ${madeforDisplay.variable} ${nunitoSans.variable} bg-black text-marfin`}
+      >
+        <Navbar />
         {children}
       </body>
     </html>

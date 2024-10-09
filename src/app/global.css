@@ -13,10 +13,43 @@
 body {
   font-optical-sizing: auto;
   font-style: normal;
-  color: #F5F5F5;
+}
+
+/* Button Animated Glowing Border */
+
+/* Button Wrapper (Fake border) */
+.button-wrapper {
+  @apply relative w-[142px] h-[42px] bg-gradient-to-b from-[#333] to-[#131313] flex items-center justify-center overflow-hidden;
+}
+
+.button-wrapper::before {
+  background: conic-gradient(
+    rgba(255, 223, 195) 20deg,
+    rgba(212, 149, 255) 40deg,
+    rgba(73, 234, 255) 60deg,
+    transparent 80deg
+  );
+  @apply absolute z-10 h-[350%] w-[100%] left-[-0%] top-[-100%] content-[''] animate-border-spin;
+}
+
+.button-wrapper::after {
+  background: conic-gradient(
+    transparent 180deg,
+    rgba(255, 223, 195) 200deg,
+    rgba(212, 149, 255) 220deg,
+    rgba(73, 234, 255) 240deg,
+    transparent 260deg
+  );
+
+  @apply absolute z-10 h-[330%] w-[100%] left-[-0%] top-[-100%] content-[''] animate-border-spin;
 }
 
 
-.text-inter {
-  font-family: var(--font-inter);
+/* Fonts */
+.font-nunito-sans {
+  font-family: var(--font-nunito-sans);
+}
+
+.font-madefor-display {
+  font-family: var(--font-madefor-display);
 }

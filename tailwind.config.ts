@@ -18,6 +18,17 @@ const config: Config = {
 
         black: '#07080a',
       },
+      keyframes: {
+        'border-spin': {
+          '100%': {
+            transform: 'rotate(-360deg)',
+          },
+        },
+      },
+
+      animation: {
+        'border-spin': 'border-spin 4s linear infinite',
+      },
     },
     screens: {
       sm: '480px',
