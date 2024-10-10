@@ -9,6 +9,7 @@ import {
   Wix_Madefor_Text,
 } from 'next/font/google'
 import { Navbar } from '../components/navbar'
+import { Footer } from '../components/footer'
 
 export const metadata: Metadata = {
   title: 'Home | Bewave',
@@ -41,8 +42,8 @@ export const metadata: Metadata = {
   applicationName: 'Bewave',
   icons: {
     icon: './favicon.ico',
-    apple: './apple-touch-icon.png',
-    shortcut: './apple-touch-icon.png',
+    apple: './logo-bewave-apple-icon.png',
+    shortcut: './logo-bewave-apple-icon.png',
   },
 }
 
@@ -72,10 +73,11 @@ export default function RootLayout({
     <html lang="en">
       <body
         id="root"
-        className={`${madeforText.className} ${madeforDisplay.variable} ${nunitoSans.variable} bg-black text-marfin`}
+        className={`${madeforText.className} ${madeforDisplay.variable} ${nunitoSans.variable} bg-black text-marfin flex flex-col justify-between`}
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   )

@@ -16,7 +16,6 @@ body {
 }
 
 /* Button Animated Glowing Border */
-
 /* Button Wrapper (Fake border) */
 .button-wrapper {
   @apply relative w-[142px] h-[42px] bg-gradient-to-b from-[#333] to-[#131313] flex items-center justify-center overflow-hidden;
@@ -42,6 +41,17 @@ body {
   );
 
   @apply absolute z-10 h-[330%] w-[100%] left-[-0%] top-[-100%] content-[''] animate-border-spin;
+}
+
+
+
+/* Carousel Wrapper */
+.container-carousel {
+  @apply relative;
+}
+
+.container-carousel::before {
+  @apply absolute z-10 left-0 top-0 h-[100px] w-[200px] bg-gradient-to-r from-black to-black/0 content-[''];
 }
 
 
