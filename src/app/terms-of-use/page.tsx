@@ -244,8 +244,23 @@ export default function TermsOfUse() {
         </SectionText>
 
         <SectionSubTitle subtitle="5.1. Veracidade das informações:" />
+        <SectionList
+          items={[
+            'Os usuários são responsáveis por fornecer informações precisas e atualizadas durante o uso da plataforma Bewave, tais como nome completo, CPF, email de pagamento, nome artístico ou nome da gravadora, entre outras necessárias para o correto funcionamento dos serviços oferecidos.',
+          ]}
+        />
         <SectionSubTitle subtitle="5.2. Responsabilidade por violações:" />
+        <SectionList
+          items={[
+            'Os usuários são responsáveis por qualquer violação dos Termos de Uso que resulte em danos à Bewave ou a terceiros.',
+          ]}
+        />
         <SectionSubTitle subtitle="5.3. Consequências legais:" />
+        <SectionList
+          items={[
+            'O uso indevido da plataforma pode resultar em responsabilidade civil ou criminal, conforme previsto pela legislação aplicável.',
+          ]}
+        />
       </section>
 
       <section className="w-full flex flex-col gap-4">
@@ -464,7 +479,7 @@ export default function TermsOfUse() {
         <SectionSubTitle subtitle="12.3. Proteção dos direitos:" />
         <SectionList
           items={[
-            'A Bewave colaborará com os titulares de direitos autorais para resolver disputas de forma justa e eficaz, visando proteger os direitos de propriedade intelectual. Se você tiver alguma dúvida sobre estes Termos de Uso, por favor, entre em contato conosco através do e-mail: contact@bewavemusic.com. © 2024 Bewave. Todos os direitos reservados.',
+            'A Bewave colaborará com os titulares de direitos autorais para resolver disputas de forma justa e eficaz, visando proteger os direitos de propriedade intelectual. Se você tiver alguma dúvida sobre estes Termos de Uso, por favor, entre em contato conosco através do e-mail: contact@bewavemusic.com.',
           ]}
         />
       </section>
