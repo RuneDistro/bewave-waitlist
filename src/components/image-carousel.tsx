@@ -12,6 +12,8 @@ export function ImageCarousel() {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
     Autoscroll({
       speed: 1,
+      stopOnInteraction: false,
+      stopOnMouseEnter: false,
     }),
   ])
 

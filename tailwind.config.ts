@@ -24,10 +24,15 @@ const config: Config = {
             transform: 'rotate(-360deg)',
           },
         },
+        // 'icon-spin': {
+        //   '100%': {
+        //     transform: 'rotate(180deg)',
+        //   },
+        // },
       },
-
       animation: {
         'border-spin': 'border-spin 4s linear infinite',
+        // 'icon-spin': 'icon-spin 500ms ease-out',
       },
     },
     screens: {
