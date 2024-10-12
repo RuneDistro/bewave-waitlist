@@ -15,34 +15,90 @@ body {
   font-style: normal;
 }
 
+
+/* Animated Gradient Text */
+.gradient-text {
+  background: linear-gradient(
+    to right,
+    #ffdfc3,
+    #EE95F8,
+    #D495FF,
+    #49EAFF,
+    #D495FF,
+    #EE95F8,
+    #ffdfc3,
+    #EE95F8,
+    #D495FF,
+    #49EAFF
+  );
+  background-size: 300% 300%;
+  background-clip: text;
+}
+
+
 /* Button Animated Glowing Border */
 /* Button Wrapper (Fake border) */
 .button-wrapper {
-  @apply relative w-[142px] h-[42px] bg-gradient-to-b from-[#333] to-[#131313] flex items-center justify-center overflow-hidden;
+  @apply relative w-[142px] h-[42px] bg-gradient-to-b from-[#333] to-[#131313] flex items-center justify-center overflow-hidden rounded-3xl transition-all duration-200;
+}
+
+.button-wrapper:hover {
+  @apply scale-105 shadow-[0_0_100px_16px_#7b3bfc70];
+}
+
+.button-wrapper:active {
+  @apply scale-100;
 }
 
 .button-wrapper::before {
   background: conic-gradient(
-    rgba(255, 223, 195) 20deg,
-    rgba(212, 149, 255) 40deg,
-    rgba(73, 234, 255) 60deg,
-    transparent 80deg
+    rgba(255, 223, 195) 15deg,
+    rgba(212, 149, 255) 30deg,
+    rgba(73, 234, 255) 45deg,
+    transparent 60deg
   );
-  @apply absolute z-10 h-[350%] w-[100%] left-[-0%] top-[-100%] content-[''] animate-border-spin;
+  @apply absolute z-10 h-[330%] w-[100%] left-[-0%] top-[-100%] content-[''] animate-border-spin;
 }
 
 .button-wrapper::after {
   background: conic-gradient(
     transparent 180deg,
-    rgba(255, 223, 195) 200deg,
-    rgba(212, 149, 255) 220deg,
-    rgba(73, 234, 255) 240deg,
-    transparent 260deg
+    rgba(255, 223, 195) 195deg,
+    rgba(212, 149, 255) 210deg,
+    rgba(73, 234, 255) 225deg,
+    transparent 250deg
   );
 
   @apply absolute z-10 h-[330%] w-[100%] left-[-0%] top-[-100%] content-[''] animate-border-spin;
 }
 
+
+/* Image Animated Glowing Border */
+/* Image Wrapper (Fake Border) */
+.image-wrapper {
+  @apply relative max-w-[525px] w-full max-h-[430px] h-[430px] bg-[#333] flex items-center justify-center overflow-hidden rounded-2xl;
+}
+
+.image-wrapper::before {
+  background: conic-gradient(
+    rgba(255, 223, 195) 10deg,
+    rgba(212, 149, 255) 20deg,
+    rgba(73, 234, 255) 30deg,
+    transparent 40deg
+  );
+  @apply absolute z-10 h-[200%] w-[200%] left-[-50%] top-[-50%] content-[''] animate-border-spin;
+}
+
+.image-wrapper::after {
+  background: conic-gradient(
+    transparent 180deg,
+    rgba(255, 223, 195) 190deg,
+    rgba(212, 149, 255) 200deg,
+    rgba(73, 234, 255) 210deg,
+    transparent 220deg
+  );
+  @apply absolute z-10 h-[200%] w-[200%] left-[-50%] top-[-50%] content-[''] animate-border-spin;
+}
 
 
 /* Carousel Wrapper */

@@ -13,8 +13,10 @@ const config: Config = {
 
         blue: '#49EAFF',
 
+        pink: '#EE95F8',
+
         purple: '#D495FF',
-        'bg-purple': '##7b3bfc25',
+        'bg-purple': '#7b3bfc25',
 
         black: '#07080a',
       },
@@ -24,15 +26,18 @@ const config: Config = {
             transform: 'rotate(-360deg)',
           },
         },
-        // 'icon-spin': {
-        //   '100%': {
-        //     transform: 'rotate(180deg)',
-        //   },
-        // },
+        gradient: {
+          '0%': {
+            backgroundPosition: '0% 50%',
+          },
+          '100%': {
+            backgroundPosition: '100% 50%',
+          },
+        },
       },
       animation: {
         'border-spin': 'border-spin 4s linear infinite',
-        // 'icon-spin': 'icon-spin 500ms ease-out',
+        gradient: 'gradient 6s linear infinite',
       },
     },
     screens: {

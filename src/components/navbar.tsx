@@ -22,7 +22,7 @@ export function Navbar() {
   ]
 
   return (
-    <header className="max-w-[1060px] w-full px-5 py-3 shadow-[0_-1px_0_1px_#131313] bg-black/30 backdrop-blur-[10px] fixed z-40 top-[18px] left-1/2 -translate-x-1/2 flex items-center justify-between rounded-2xl">
+    <header className="max-w-[1060px] w-full px-5 py-3 shadow-[0_-1px_0_1px_#33333350] bg-black/30 backdrop-blur-[10px] fixed z-40 top-[18px] left-1/2 -translate-x-1/2 flex items-center justify-between rounded-2xl">
       <div className="w-[80px] h-[17px] relative">
         <Link href="/" className="w-full h-full">
           <Image src={bewave} alt="Bewave logo" fill priority quality={100} />

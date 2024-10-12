@@ -6,6 +6,9 @@ import { AiOutlinePercentage } from 'react-icons/ai'
 import { LuUser } from 'react-icons/lu'
 import { HiOutlineLightningBolt } from 'react-icons/hi'
 import { IoArrowForwardCircleOutline } from 'react-icons/io5'
+import { FaRegCircle } from 'react-icons/fa'
+
+import Image from 'next/image'
 
 const infoCards: CardsProps[] = [
   {
@@ -33,10 +36,13 @@ export default function Home() {
     <main className="max-w-[1060px] w-full mx-auto">
       <div className="flex flex-col items-center justify-center h-[480px] gap-2">
         <h1 className="text-[45px] font-bold text-center">
-          O futuro da distribuição
+          O futuro da{' '}
+          <span className="gradient-text text-transparent animate-gradient">
+            distribuição
+          </span>
         </h1>
 
-        <p className="max-w-[675px] w-full text-center text-[18px] leading-7 mb-2">
+        <p className="max-w-[675px] w-full text-center text-[18px] leading-7 mb-2 z-10">
           A Bewave facilita a conexão entre artistas e as principais plataformas
           digitais, oferecendo distribuição global e suporte especializado
         </p>
@@ -44,11 +50,11 @@ export default function Home() {
         <CTAButton />
       </div>
 
-      <section className="w-full mb-[240px]">
+      <section className="w-full pb-[120px]">
         <ImageCarousel />
       </section>
 
-      <section className="w-full flex flex-col gap-6">
+      <section className="w-full flex flex-col gap-6 py-[120px]">
         <div className="w-full flex items-center justify-between">
           {infoCards.map((card) => (
             <Cards
@@ -82,6 +88,186 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="w-full flex items-center justify-between gap-34 py-[120px]">
+        <div className="flex flex-col gap-3 max-w-[480px] w-full">
+          <h2 className="text-white text-[28px] font-madefor-display font-bold">
+            Distribua Globalmente
+          </h2>
+          <h3 className="text-beige text-2xl font-madefor-display font-bold mb-4">
+            Enviamos seu conteúdo para mais de 75 lojas ao redor do mundo
+          </h3>
+          <p className="text-[15px] leading-7">
+            A Bewave é parceira das principais plataformas de distribuição
+            musical no mundo, incluindo Spotify, YouTube, Deezer e muitas
+            outras. Oferecemos diversas vantagens para maximizar a visibilidade
+            do seu conteúdo. Nossa plataforma garante uma relação sólida e ágil
+            com todas as lojas, permitindo entregas rápidas e eficientes. Com a
+            Bewave, você terá uma experiência superior, com suporte dedicado e
+            acesso a uma ampla rede global.
+          </p>
+        </div>
+        <div className="w-[500px] h-[500px] rounded-2xl bg-[#333] flex items-center justify-center">
+          <div className="w-[calc(100%-2px)] h-[calc(100%-2px)] rounded-2xl overflow-hidden relative">
+            <Image
+              src="/images/fake-image.png"
+              alt="Fake image"
+              className="object-scale-down"
+              objectFit="cover"
+              quality={100}
+              fill
+              sizes="(min-width: 726px) 70vw, 100vw"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full flex items-center justify-between gap-4 py-[120px]">
+        <div className="image-wrapper">
+          <div className="w-[calc(100%-2px)] h-[calc(100%-2px)] z-20 relative rounded-2xl overflow-hidden bg-[#111]">
+            <Image
+              src="/images/dark-background.png"
+              alt="Imagem com um fundo preto e um gradiente de azul com tons metálicos"
+              className="object-scale-down"
+              objectFit="cover"
+              quality={100}
+              fill
+              sizes="(min-width: 726px) 70vw, 100vw"
+            />
+          </div>
+        </div>
+        <div className="flex flex-col gap-3 max-w-[480px] w-full">
+          <h2 className="text-white text-[28px] font-madefor-display font-bold">
+            Esteja Atualizado
+          </h2>
+          <h3 className="text-purple text-2xl font-madefor-display font-bold mb-4">
+            Dashboard simples e intuitiva
+          </h3>
+          <p className="text-[15px] leading-7">
+            A Bewave foi desenvolvida para simplificar e focar no que realmente
+            importa para nossos clientes. Cada etapa, desde o upload da sua
+            primeira faixa até a distribuição nas lojas, conta com tutoriais
+            interativos e em tempo real. Não exibimos informações desnecessárias
+            e poluentes em sua dashboard, garantindo sempre um uptime de 24/7.
+            Oferecemos alertas de atualizações e programas de parcerias
+            disponíveis em nosso Marketplace, acessíveis diretamente na sua
+            dashboard.
+          </p>
+        </div>
+      </section>
+
+      <section className="w-full flex items-center justify-between gap-20 py-[120px]">
+        <div className="flex flex-col gap-3 max-w-[480px] w-full">
+          <h2 className="text-white text-[28px] font-madefor-display font-bold">
+            Transforme 15 dias em 1
+          </h2>
+          <h3 className="text-blue text-2xl font-madefor-display font-bold mb-4">
+            Prezamos pela eficiência
+          </h3>
+          <p className="text-[15px] leading-7 mb-5">
+            Diga adeus ao processo padrão de distribuição. Com a Bewave, você
+            pode licenciar seu conteúdo em questão de horas, sem precisar se
+            preocupar com os longos dias de aprovação que outras distribuidoras
+            exigem. Licencie seu conteúdo e veja-o disponível nas lojas
+            selecionadas no mesmo dia.
+          </p>
+
+          <div className="w-full flex items-center gap-28">
+            <div className="flex flex-col gap-2 text-white font-madefor-display font-bold text-2xl">
+              <span className="text-[38px]">150+</span>
+              Países
+            </div>
+
+            <div className="flex flex-col gap-2 text-white font-madefor-display font-bold text-2xl">
+              <span className="text-[38px]">2B+</span>
+              Streamings
+            </div>
+          </div>
+        </div>
+
+        <div className="flex items-center justify-between flex-grow">
+          <div className="max-w-[240px] w-full border border-[#333] rounded-xl text-[13px] p-3">
+            <div className="flex items-center justify-between mb-3">
+              <p>Distribuição padrão</p>
+              <span>10 dias</span>
+            </div>
+            Outras distribuidoras
+            <div className="flex items-center mt-6 gap-3">
+              <div className="pl-2 flex flex-col items-center justify-center">
+                <Circle />
+                <DashedLine />
+                <Circle />
+                <DashedLine />
+                <Circle />
+              </div>
+              <div className="flex-grow flex flex-col items-start justify-center">
+                <div className="flex flex-col items-center justify-center gap-8">
+                  <DistributionCards name="Aprovação" />
+                  <span>3 dias</span>
+
+                  <DistributionCards name="Envio" />
+                  <span>7 dias</span>
+
+                  <DistributionCards name="Disponível nas lojas" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="max-w-[240px] w-full border border-[#333] rounded-xl text-[13px] p-3">
+            <div className="flex items-center justify-between mb-3">
+              <p>Futuro da distribuição</p>
+              <span>1 dia</span>
+            </div>
+            Bewave
+            <div className="flex items-center mt-6 gap-3">
+              <div className="pl-2 flex flex-col items-center justify-center">
+                <Circle />
+                <DashedLine />
+                <Circle />
+                <DashedLine />
+                <Circle />
+              </div>
+              <div className="flex-grow flex flex-col items-start justify-center">
+                <div className="flex flex-col items-center justify-center gap-8">
+                  <DistributionCards name="Aprovação" />
+                  <span>120 minutos</span>
+
+                  <DistributionCards name="Envio" />
+                  <span>1 dia</span>
+
+                  <DistributionCards name="Disponível nas lojas*" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+  )
+}
+
+function DistributionCards({ name }: { name: string }) {
+  return (
+    <div className="w-[154px] py-2 border border-[#333] rounded-3xl flex items-center justify-center text-[13px]">
+      {name}
+    </div>
+  )
+}
+
+function Circle() {
+  return (
+    <div role="figure" className="flex items-center justify-center py-4">
+      <FaRegCircle size={13} className="text-white" />
+    </div>
+  )
+}
+
+function DashedLine() {
+  return (
+    <div
+      role="figure"
+      className="border border-dashed border-white h-[75px]"
+    ></div>
   )
 }
