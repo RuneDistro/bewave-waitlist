@@ -7,6 +7,7 @@ import { LuUser } from 'react-icons/lu'
 import { HiOutlineLightningBolt } from 'react-icons/hi'
 import { IoArrowForwardCircleOutline } from 'react-icons/io5'
 import { FaRegCircle } from 'react-icons/fa'
+import Spline from '@splinetool/react-spline/next'
 
 import Image from 'next/image'
 
@@ -111,17 +112,9 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="max-w-[500px] w-full max-h-[500px] aspect-square rounded-2xl bg-[#333] flex items-center justify-center">
+        <div className="max-w-[500px] w-full max-h-[500px] aspect-square rounded-2xl bg-[#333] flex items-center justify-center shadow-[0_0_64px_5px_#1F59D620]">
           <div className="w-[calc(100%-2px)] h-[calc(100%-2px)] rounded-2xl overflow-hidden relative">
-            <Image
-              src="/images/fake-image.png"
-              alt="Fake image"
-              className="object-scale-down"
-              objectFit="cover"
-              quality={100}
-              fill
-              sizes="(min-width: 726px) 70vw, 100vw"
-            />
+            <Spline scene="https://prod.spline.design/QZL1XGoS5efv23NY/scene.splinecode" />
           </div>
         </div>
       </section>
