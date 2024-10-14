@@ -1,6 +1,6 @@
 export default function TermsOfUse() {
   return (
-    <main className="max-w-[920px] w-full mx-auto mt-[170px] px-5">
+    <main className="max-w-[920px] w-full mx-auto mt-[170px]">
       <div className="flex flex-col gap-8 mb-8">
         <h1 className="text-center font-madefor-display text-5xl font-bold text-white">
           Termos de Uso da Bewave

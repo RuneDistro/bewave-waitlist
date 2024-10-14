@@ -76,7 +76,7 @@ body {
 /* Image Animated Glowing Border */
 /* Image Wrapper (Fake Border) */
 .image-wrapper {
-  @apply relative max-w-[525px] w-full max-h-[430px] h-[430px] bg-[#333] flex items-center justify-center overflow-hidden rounded-2xl;
+  @apply relative max-w-[525px] w-full max-h-[430px] h-full lgp:h-[430px] aspect-[5/4] lgp:aspect-auto bg-[#333] flex items-center justify-center overflow-hidden rounded-2xl;
 }
 
 .image-wrapper::before {
@@ -107,11 +107,11 @@ body {
 }
 
 .container-carousel::before {
-  @apply absolute z-10 left-0 top-0 h-[100px] w-[200px] bg-gradient-to-r from-black to-black/0 content-[''];
+  @apply absolute z-10 left-0 top-0 h-[100px] w-[80px] md:w-[200px] bg-gradient-to-r from-black to-black/0 content-[''];
 }
 
 .container-carousel::after {
-  @apply absolute z-10 right-0 top-0 h-[100px] w-[200px] bg-gradient-to-r from-black/0 to-black content-[''];
+  @apply absolute z-10 right-0 top-0 h-[100px] w-[80px] md:w-[200px] bg-gradient-to-r from-black/0 to-black content-[''];
 }
 
 

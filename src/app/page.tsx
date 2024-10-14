@@ -34,7 +34,7 @@ const infoCards: CardsProps[] = [
 export default function Home() {
   return (
     <main className="max-w-[1060px] w-full mx-auto">
-      <div className="flex flex-col items-center justify-center h-[480px] gap-2">
+      <div className="flex flex-col items-center justify-center h-[500px] sm:h-[480px] gap-2">
         <h1 className="text-[45px] font-bold text-center">
           O futuro da{' '}
           <span className="gradient-text text-transparent animate-gradient">
@@ -42,7 +42,7 @@ export default function Home() {
           </span>
         </h1>
 
-        <p className="max-w-[675px] w-full text-center text-[18px] leading-7 mb-2 z-10">
+        <p className="max-w-[675px] w-full text-center text-[18px] leading-7 pb-10 md:pb-2 z-10">
           A Bewave facilita a conexão entre artistas e as principais plataformas
           digitais, oferecendo distribuição global e suporte especializado
         </p>
@@ -54,8 +54,8 @@ export default function Home() {
         <ImageCarousel />
       </section>
 
-      <section className="w-full flex flex-col gap-6 py-[120px]">
-        <div className="w-full flex items-center justify-between">
+      <section className="w-full flex flex-col items-center justify-center lgp:items-start lgp:justify-start gap-8 lgp:gap-6 py-[120px]">
+        <div className="w-full flex items-center justify-center gap-8 lgp:justify-between lgp:gap-0 flex-wrap">
           {infoCards.map((card) => (
             <Cards
               key={card.title}
@@ -66,7 +66,7 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="bg-marfin text-black rounded-3xl p-8 flex items-center justify-between gap-10">
+        <div className="bg-marfin text-black rounded-3xl p-8 flex flex-col md:flex-row items-center justify-center gap:6 md:justify-between md:gap-10">
           <div className="flex flex-col gap-2 max-w-[915px]">
             <h3 className="text-[18px] font-madefor-display font-bold text-black">
               Label? Explore Todos os Benefícios para Seus Artistas
@@ -83,14 +83,14 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="h-full border-black">
+          <div className="md:h-full hidden md:block">
             <IoArrowForwardCircleOutline size={40} />
           </div>
         </div>
       </section>
 
-      <section className="w-full flex items-center justify-between gap-34 py-[120px]">
-        <div className="flex flex-col gap-3 max-w-[480px] w-full">
+      <section className="w-full flex flex-col lgp:flex-row items-center justify-center lgp:justify-between gap-12 lgp:gap-34 py-[120px]">
+        <div className="flex flex-col gap-3 lgp:max-w-[480px] w-full">
           <h2 className="text-white text-[28px] font-madefor-display font-bold">
             Distribua Globalmente
           </h2>
@@ -107,7 +107,8 @@ export default function Home() {
             acesso a uma ampla rede global.
           </p>
         </div>
-        <div className="w-[500px] h-[500px] rounded-2xl bg-[#333] flex items-center justify-center">
+
+        <div className="max-w-[500px] w-full max-h-[500px] aspect-square rounded-2xl bg-[#333] flex items-center justify-center">
           <div className="w-[calc(100%-2px)] h-[calc(100%-2px)] rounded-2xl overflow-hidden relative">
             <Image
               src="/images/fake-image.png"
@@ -122,7 +123,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full flex items-center justify-between gap-4 py-[120px]">
+      <section className="w-full flex flex-col-reverse lgp:flex-row items-center justify-center lgp:justify-between gap-12 lgp:gap-4 py-[120px]">
         <div className="image-wrapper">
           <div className="w-[calc(100%-2px)] h-[calc(100%-2px)] z-20 relative rounded-2xl overflow-hidden bg-[#111]">
             <Image
@@ -136,7 +137,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="flex flex-col gap-3 max-w-[480px] w-full">
+        <div className="flex flex-col gap-3 lgp:max-w-[480px] w-full">
           <h2 className="text-white text-[28px] font-madefor-display font-bold">
             Esteja Atualizado
           </h2>
@@ -156,8 +157,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full flex items-center justify-between gap-20 py-[120px]">
-        <div className="flex flex-col gap-3 max-w-[480px] w-full">
+      <section className="w-full flex flex-col lgp:flex-row items-center justify-center lgp:justify-between gap-12 lgp:gap-20 py-[120px]">
+        <div className="flex flex-col gap-3 lgp:max-w-[480px] w-full">
           <h2 className="text-white text-[28px] font-madefor-display font-bold">
             Transforme 15 dias em 1
           </h2>
@@ -172,7 +173,7 @@ export default function Home() {
             selecionadas no mesmo dia.
           </p>
 
-          <div className="w-full flex items-center gap-28">
+          <div className="w-full flex items-center gap-10 sm:gap-28">
             <div className="flex flex-col gap-2 text-white font-madefor-display font-bold text-2xl">
               <span className="text-[38px]">150+</span>
               Países
@@ -185,7 +186,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex items-center justify-between flex-grow">
+        <div className="flex items-center justify-center flex-grow w-full lgp:justify-between gap-8 lgp:gap-0 flex-wrap lgp:w-auto">
           <div className="max-w-[240px] w-full border border-[#333] rounded-xl text-[13px] p-3">
             <div className="flex items-center justify-between mb-3">
               <p>Distribuição padrão</p>

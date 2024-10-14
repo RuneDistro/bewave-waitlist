@@ -51,7 +51,7 @@ export function ImageCarousel() {
           {images.map((image) => (
             <div
               key={image.alt}
-              className="flex-[0_0_20%] h-[100px] min-w-0 flex items-center justify-center"
+              className="flex-[0_0_45%] md:flex-[0_0_20%] h-[100px] min-w-0 flex items-center justify-center"
             >
               <div className="w-[160px] h-[40px] relative">
                 <Image
