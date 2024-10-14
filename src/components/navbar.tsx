@@ -13,11 +13,11 @@ export function Navbar() {
   const menus: NavbarMenuType[] = [
     {
       name: 'Vantagens',
-      url: '#',
+      url: '/#vantagens',
     },
     {
       name: 'Dashboard',
-      url: '#dashboard',
+      url: '/#dashboard',
     },
   ]
 

@@ -89,7 +89,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full flex flex-col lgp:flex-row items-center justify-center lgp:justify-between gap-12 lgp:gap-34 py-[120px]">
+      <section
+        id="vantagens"
+        className="w-full flex flex-col lgp:flex-row items-center justify-center lgp:justify-between gap-12 lgp:gap-34 py-[120px]"
+      >
         <div className="flex flex-col gap-3 lgp:max-w-[480px] w-full">
           <h2 className="text-white text-[28px] font-madefor-display font-bold">
             Distribua Globalmente
@@ -123,7 +126,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full flex flex-col-reverse lgp:flex-row items-center justify-center lgp:justify-between gap-12 lgp:gap-4 py-[120px]">
+      <section
+        id="dashboard"
+        className="w-full flex flex-col-reverse lgp:flex-row items-center justify-center lgp:justify-between gap-12 lgp:gap-4 py-[120px]"
+      >
         <div className="image-wrapper">
           <div className="w-[calc(100%-2px)] h-[calc(100%-2px)] z-20 relative rounded-2xl overflow-hidden bg-[#111]">
             <Image
