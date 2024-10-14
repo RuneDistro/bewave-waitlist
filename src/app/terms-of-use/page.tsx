@@ -1,3 +1,65 @@
+import Link from 'next/link'
+
+type SectionsType = {
+  title: string
+  url: string
+}
+
+const sections: SectionsType[] = [
+  {
+    title: 'Introdução',
+    url: '/terms-of-use#introducao',
+  },
+  {
+    title: 'O que é a plataforma Bewave',
+    url: '/terms-of-use#o-que-e-a-plataforma-bewave',
+  },
+  {
+    title: 'Uso do aplicativo - Forma de utilização',
+    url: '/terms-of-use#uso-do-aplicativo-forma-de-utilizacao',
+  },
+  {
+    title: 'Regras para a utilização da plataforma',
+    url: '/terms-of-use#regras-para-a-utilizacao-da-plataforma',
+  },
+  {
+    title: 'Envios',
+    url: '/terms-of-use#envios',
+  },
+  {
+    title: 'Garantias e declarações',
+    url: '/terms-of-use#garantias-e-declaracoes',
+  },
+  {
+    title: 'Objecções, limitações e exclusões',
+    url: '/terms-of-use#objeccoes-limitacoes-e-exclusoes',
+  },
+  {
+    title: 'Indenizações',
+    url: '/terms-of-use#indenizacoes',
+  },
+  {
+    title: 'Encerramento',
+    url: '/terms-of-use#encerramento',
+  },
+  {
+    title: 'Notificação',
+    url: '/terms-of-use#notificacao',
+  },
+  {
+    title: 'Resolução de Litígios',
+    url: '/terms-of-use#resolucao-de-litigios',
+  },
+  {
+    title: 'Conteúdo e propriedade dos direitos autorais',
+    url: '/terms-of-use#conteudo-e-propriedade-dos-direitos-autorais',
+  },
+  {
+    title: 'Reclamação e Violação de Direitos Autorais',
+    url: '/terms-of-use#reclamacao-e-violacao-de-direitos-autorais',
+  },
+]
+
 export default function TermsOfUse() {
   return (
     <main className="max-w-[920px] w-full mx-auto mt-[170px]">
@@ -11,7 +73,23 @@ export default function TermsOfUse() {
         </p>
       </div>
 
-      <section className="w-full flex flex-col gap-4">
+      <aside className="fixed right-5 top-1/2 -translate-y-1/2">
+        <div className="hidden xl:flex items-center justify-center bg-black/60 border border-[#121212] p-[18px] rounded-xl">
+          <ul className="hidden xl:flex flex-col items-end justify-center gap-1">
+            {sections.map((section) => (
+              <Link
+                href={section.url}
+                key={section.url}
+                className="text-sm text-[#999] hover:text-marfin focus:text-marfin transition-all duration-200"
+              >
+                <li>{section.title}</li>
+              </Link>
+            ))}
+          </ul>
+        </div>
+      </aside>
+
+      <section id="introducao" className="w-full flex flex-col gap-4">
         <SectionTitle title="Introdução" />
 
         <SectionText>
@@ -87,7 +165,10 @@ export default function TermsOfUse() {
         </SectionText>
       </section>
 
-      <section className="w-full flex flex-col gap-4">
+      <section
+        id="o-que-e-a-plataforma-bewave"
+        className="w-full flex flex-col gap-4"
+      >
         <SectionTitle title="1. O que é a plataforma Bewave:" />
 
         <SectionText>
@@ -126,7 +207,10 @@ export default function TermsOfUse() {
         />
       </section>
 
-      <section className="w-full flex flex-col gap-4">
+      <section
+        id="uso-do-aplicativo-forma-de-utilizacao"
+        className="w-full flex flex-col gap-4"
+      >
         <SectionTitle title="2. Uso do aplicativo - Forma de utilização:" />
 
         <SectionText>
@@ -163,7 +247,10 @@ export default function TermsOfUse() {
         />
       </section>
 
-      <section className="w-full flex flex-col gap-4">
+      <section
+        id="regras-para-a-utilizacao-da-plataforma"
+        className="w-full flex flex-col gap-4"
+      >
         <SectionTitle title="3. Regras para a utilização da plataforma:" />
 
         <SectionText>
@@ -198,7 +285,7 @@ export default function TermsOfUse() {
         />
       </section>
 
-      <section className="w-full flex flex-col gap-4">
+      <section id="envios" className="w-full flex flex-col gap-4">
         <SectionTitle title="4. Envios" />
 
         <SectionText>
@@ -232,7 +319,10 @@ export default function TermsOfUse() {
         />
       </section>
 
-      <section className="w-full flex flex-col gap-4">
+      <section
+        id="garantias-e-declaracoes"
+        className="w-full flex flex-col gap-4"
+      >
         <SectionTitle title="5. Garantias e declarações:" />
         <SectionText>
           Os usuários garantem que todas as informações fornecidas à Bewave são
@@ -263,7 +353,10 @@ export default function TermsOfUse() {
         />
       </section>
 
-      <section className="w-full flex flex-col gap-4">
+      <section
+        id="objeccoes-limitacoes-e-exclusoes"
+        className="w-full flex flex-col gap-4"
+      >
         <SectionTitle title="6. Objecções, limitações e exclusões:" />
         <SectionText>
           A Bewave reserva-se o direito de limitar ou restringir o acesso de
@@ -296,7 +389,7 @@ export default function TermsOfUse() {
         />
       </section>
 
-      <section className="w-full flex flex-col gap-4">
+      <section id="indenizacoes" className="w-full flex flex-col gap-4">
         <SectionTitle title="7. Indenizações:" />
         <SectionText>
           Os usuários concordam em indenizar, defender e isentar a Bewave, seus
@@ -327,7 +420,7 @@ export default function TermsOfUse() {
         />
       </section>
 
-      <section className="w-full flex flex-col gap-4">
+      <section id="encerramento" className="w-full flex flex-col gap-4">
         <SectionTitle title="8. Encerramento:" />
         <SectionText>
           Os usuários têm o direito de encerrar suas contas na Bewave a qualquer
@@ -359,7 +452,7 @@ export default function TermsOfUse() {
         />
       </section>
 
-      <section className="w-full flex flex-col gap-4">
+      <section id="notificacao" className="w-full flex flex-col gap-4">
         <SectionTitle title="9. Notificação:" />
         <SectionText>
           A Bewave poderá enviar notificações aos usuários por e-mail, mensagens
@@ -390,7 +483,10 @@ export default function TermsOfUse() {
         />
       </section>
 
-      <section className="w-full flex flex-col gap-4">
+      <section
+        id="resolucao-de-litigios"
+        className="w-full flex flex-col gap-4"
+      >
         <SectionTitle title="10. Resolução de Litígios:" />
         <SectionText>
           Qualquer disputa relacionada a estes Termos de Uso será regida pelas
@@ -422,7 +518,10 @@ export default function TermsOfUse() {
         />
       </section>
 
-      <section className="w-full flex flex-col gap-4">
+      <section
+        id="conteudo-e-propriedade-dos-direitos-autorais"
+        className="w-full flex flex-col gap-4"
+      >
         <SectionTitle title="11. Conteúdo e propriedade dos direitos autorais:" />
         <SectionText>
           Todo o conteúdo enviado pelos usuários à plataforma Bewave continua
@@ -453,7 +552,10 @@ export default function TermsOfUse() {
         />
       </section>
 
-      <section className="w-full flex flex-col gap-4">
+      <section
+        id="reclamacao-e-violacao-de-direitos-autorais"
+        className="w-full flex flex-col gap-4"
+      >
         <SectionTitle title="12. Reclamação e Violação de Direitos Autorais:" />
         <SectionText>
           A Bewave respeita os direitos de propriedade intelectual de terceiros.
@@ -489,7 +591,7 @@ export default function TermsOfUse() {
 
 function SectionTitle({ title }: { title: string }) {
   return (
-    <h2 className="w-full border-b border-[#333] font-madefor-display text-white text-2xl pt-8 pb-3">
+    <h2 className="w-full border-b border-[#333] font-madefor-display text-white text-2xl pt-16 pb-3">
       {title}
     </h2>
   )
