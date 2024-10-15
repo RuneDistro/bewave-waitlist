@@ -58,10 +58,9 @@ export function ImageCarousel() {
                   src={image.imageUrl}
                   alt={image.alt}
                   fill
-                  objectFit="cover"
                   quality={100}
                   priority
-                  className="aspect-square"
+                  className="aspect-square object-cover"
                 />
               </div>
             </div>

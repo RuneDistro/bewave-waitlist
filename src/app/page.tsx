@@ -174,13 +174,23 @@ export default function Home() {
 
           <div className="w-full flex items-center gap-10 sm:gap-28">
             <div className="flex flex-col gap-2 text-white font-madefor-display font-bold text-2xl">
-              <span className="text-[38px]">150+</span>
-              Países
+              <div className="flex items-center justify-start text-[38px]">
+                <p className="">
+                  <span className="">150</span>
+                </p>
+                <span>+</span>
+              </div>
+              <p>Países</p>
             </div>
 
             <div className="flex flex-col gap-2 text-white font-madefor-display font-bold text-2xl">
-              <span className="text-[38px]">2B+</span>
-              Streamings
+              <div className="flex items-center justify-start text-[38px]">
+                <p className="">
+                  <span className="">2</span>
+                </p>
+                <span>B+</span>
+              </div>
+              <p>Streamings</p>
             </div>
           </div>
         </div>
